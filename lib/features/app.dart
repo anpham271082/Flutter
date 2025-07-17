@@ -2,8 +2,10 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_app_flutter/core/utils/files.dart';
+import 'package:my_app_flutter/features/drawer_menu.dart';
 import 'package:my_app_flutter/features/electronics/bloc/electronics_bloc.dart';
 import 'package:my_app_flutter/features/electronics/view/pages/electronics_page.dart';
+import 'package:my_app_flutter/features/menu_item.dart';
 import 'package:my_app_flutter/features/notification/view/pages/notification_page.dart';
 import 'package:my_app_flutter/features/samples/samples_page.dart';
 import '../core/constants/themes.dart';
@@ -32,6 +34,15 @@ class MyAppState extends State<MyApp> {
   static GlobalKey bottomNavigationBarKey = GlobalKey();
   final GlobalKey<MyAppState> keyMyAppState = GlobalKey<MyAppState>();
 
+
+  final List<MenuItem> menuItems = [
+    MenuItem('Dashboard', Icons.dashboard),
+    MenuItem('Profile', Icons.person),
+    MenuItem('Messages', Icons.message),
+    MenuItem('Settings', Icons.settings),
+    MenuItem('Logout', Icons.logout),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -46,6 +57,10 @@ class MyAppState extends State<MyApp> {
           ),
         ],
         child: Scaffold(
+          appBar: AppBar(
+        title: Text("my_app_flutter"),
+      ),
+          drawer: DrawerMenu(menuItems: menuItems),
           body: _listPages[_selectedIndex],
           bottomNavigationBar: BottomNavigationBar(
             key: bottomNavigationBarKey,

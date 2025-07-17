@@ -4,9 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:my_app_flutter/features/google_map/model/location_model.dart';
 
 class MapPickerViewModel with ChangeNotifier {
-  static final MapPickerViewModel _instance = MapPickerViewModel._internal();
-  static MapPickerViewModel getInstance() =>_instance;
-  MapPickerViewModel._internal();
 
   StreamController<LocationModel> locationController =
       StreamController<LocationModel>.broadcast();

@@ -13,7 +13,7 @@ class MapPickerPage extends StatelessWidget {
         title: Text('Map Picker'),
       ),
       body: ChangeNotifierProvider<MapPickerViewModel>(
-        create: (BuildContext context) => MapPickerViewModel.getInstance(),
+        create: (BuildContext context) => MapPickerViewModel(),
         child: MapPickerBody(),
       )
     );
