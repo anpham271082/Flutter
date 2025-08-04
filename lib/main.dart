@@ -38,7 +38,7 @@ Future<void> main() async {
         ),
       ],
       child: MaterialApp(
-              debugShowCheckedModeBanner: false,
+              //debugShowCheckedModeBanner: false,
               navigatorKey: AppNavigator.navigationKey,
               home: const SplashPage(),
               routes: <String, WidgetBuilder>{

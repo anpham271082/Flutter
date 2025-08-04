@@ -26,20 +26,24 @@ class _PlatformChannelState extends State<PlatformChannel> {
     super.initState();
   }
   @override
-  Widget build(BuildContext context) {
-    return Material(
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            ElevatedButton(
-              onPressed: _getBatteryLevel,
-              child: const Text('Get Battery Level'),
-            ),
-            Text(_batteryLevel),
-          ],
-        ),
+  @override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: const Text('Platform Channel'),
+    ),
+    body: Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          ElevatedButton(
+            onPressed: _getBatteryLevel,
+            child: const Text('Get Battery Level'),
+          ),
+          Text(_batteryLevel),
+        ],
       ),
-    );
-  }
+    ),
+  );
+}
 }

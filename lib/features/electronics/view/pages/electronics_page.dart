@@ -65,7 +65,7 @@ class ElectronicsPage extends StatelessWidget {
       required uiData,
       Axis scrollDirection = Axis.horizontal}) {
     return SizedBox(
-      height: AppDevices.shared.height-320,
+      height: AppDevices.shared.height-340,
       child: ListView.builder(
         scrollDirection: scrollDirection,
         itemCount: uiData.length,

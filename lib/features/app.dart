@@ -7,7 +7,8 @@ import 'package:my_app_flutter/features/electronics/bloc/electronics_bloc.dart';
 import 'package:my_app_flutter/features/electronics/view/pages/electronics_page.dart';
 import 'package:my_app_flutter/features/menu_item.dart';
 import 'package:my_app_flutter/features/notification/view/pages/notification_page.dart';
-import 'package:my_app_flutter/features/samples/samples_page.dart';
+import 'package:my_app_flutter/features/examples/example_pages.dart';
+import 'package:my_app_flutter/features/slide_image/slide_image_page.dart';
 import '../core/constants/themes.dart';
 import 'package:my_app_flutter/features/home/view/pages/home_page.dart';
 import '../core/constants/colors.dart';
@@ -29,7 +30,8 @@ class MyAppState extends State<MyApp> {
     const HomePage(),
     const ElectronicsPage(),
     const NotificationPage(),
-    const SamplesPage(),
+    const SlideImagePage(),
+    const ExamplePages(),
   ];
   static GlobalKey bottomNavigationBarKey = GlobalKey();
   final GlobalKey<MyAppState> keyMyAppState = GlobalKey<MyAppState>();
@@ -78,6 +80,10 @@ class MyAppState extends State<MyApp> {
               BottomNavigationBarItem(
                 icon: Icon(Icons.notifications),
                 label: AppFiles.shared.language("Notification", "Notification"),
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.notifications),
+                label: AppFiles.shared.language("Slide Image", "Slide Image"),
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.settings),
