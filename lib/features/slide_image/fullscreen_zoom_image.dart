@@ -22,15 +22,22 @@ class _FullScreenZoomImageState extends State<FullScreenZoomImage> {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(0), // Có thể bo nếu muốn
               child: PhotoView(
-                imageProvider: NetworkImage(widget.imageUrl),
-                backgroundDecoration: BoxDecoration(color: Colors.black),
-                loadingBuilder: (context, event) => const Center(
-                  child: CircularProgressIndicator(),
-                ),
-                errorBuilder: (context, error, stackTrace) => const Center(
-                  child: Text('Failed to load image', style: TextStyle(color: Colors.white)),
-                ),
-              ),
+                      imageProvider: NetworkImage(widget.imageUrl),
+                      backgroundDecoration: BoxDecoration(color: Colors.black),
+                      loadingBuilder: (context, event) => const Center(
+                        child: CircularProgressIndicator(),
+                      ),
+                      errorBuilder: (context, error, stackTrace) => const Center(
+                        child: Text('Failed to load image', style: TextStyle(color: Colors.white)),
+                      ),
+
+                      enableRotation: true,   // Cho phép xoay ảnh
+
+                      minScale: PhotoViewComputedScale.contained * 1.0, // Không cho zoom nhỏ hơn kích thước màn hình
+                      maxScale: PhotoViewComputedScale.covered * 3.0,   // Cho phép zoom lớn gấp 3 lần màn hình
+
+                      initialScale: PhotoViewComputedScale.contained,   // Mở đầu ở tỉ lệ vừa đủ chứa trong màn hình
+                    ),
             ),
           ),
 

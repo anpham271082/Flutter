@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_app_flutter/features/menu_item.dart';
+import 'package:my_app_flutter/features/menu/menu_item.dart';
 
 class DrawerMenu extends StatelessWidget {
   final List<MenuItem> menuItems;

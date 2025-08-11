@@ -60,7 +60,7 @@ class _SlideImagePageState extends State<SlideImagePage> {
               autoPlay: true,
               autoPlayInterval: const Duration(seconds: 3),
               enableInfiniteScroll: true,
-              viewportFraction: 0.9,
+              viewportFraction: 0.7,
               onPageChanged: (index, reason) {
                 setState(() => _currentIndex = index);
               },
