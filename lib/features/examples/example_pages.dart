@@ -4,12 +4,13 @@ import 'package:my_app_flutter/core/constants/colors.dart';
 import 'package:my_app_flutter/core/utils/devices.dart';
 import 'package:my_app_flutter/core/utils/files.dart';
 import 'package:my_app_flutter/features/base_page.dart';
-import 'package:my_app_flutter/features/examples/example_card_swiper.dart';
+import 'package:my_app_flutter/features/examples/example_flutter_card_swiper.dart';
 import 'package:my_app_flutter/features/examples/example_fragmented_image.dart';
 import 'package:my_app_flutter/features/examples/example_lottie.dart';
 import 'package:my_app_flutter/features/examples/flip_card3d/example_flipcard3d.dart';
 import 'package:my_app_flutter/features/examples/hero_transition/example_hero_transition.dart';
 import 'package:my_app_flutter/features/examples/shimmer/example_shimmer.dart';
+import 'package:my_app_flutter/features/examples/swipe_card/example_swipe_card.dart';
 import 'package:my_app_flutter/features/platform_channel/platform_channel.dart';
 import 'package:my_app_flutter/features/examples/animation_grocery/example_grocery.dart';
 import 'package:my_app_flutter/ripple_shader_example.dart';
@@ -28,13 +29,15 @@ class _ExamplePagesState extends BaseState<ExamplePages> {
     _ExampleItem("Hero Transition", const ExampleHeroTransition()),
     _ExampleItem("Lottie", const ExampleLottie()),
     _ExampleItem("Flip Card 3D", const ExampleFlipCard3D()),
-    _ExampleItem("Card Swiper",  ExampleCardSwiper()),
-
+    _ExampleItem("Flutter Card Swiper",  ExampleFlutterCardSwiper()),
+    _ExampleItem("Swipe Card",  ExampleSwipeCard()),
     _ExampleItem("Shimmer", const ExampleShimmer()),
     _ExampleItem("Fragmented Image", const ExampleFragmentedImage()),
     //_ExampleItem("Fragmented Image", const RippleShaderExample()),
     _ExampleItem("Grocery List",  ExampleGrocery()),
     _ExampleItem("Staggered Animations",  ExampleStaggeredAnimations()),
+    
+    
     
     //_ExampleItem("Google Map", const MapPickerPage()),  
   ];

@@ -4,14 +4,14 @@ import 'package:my_app_flutter/features/examples/example_candidate_model.dart';
 import 'package:my_app_flutter/features/examples/example_card.dart';
 
 
-class ExampleCardSwiper extends StatefulWidget {
-  const ExampleCardSwiper({super.key});
+class ExampleFlutterCardSwiper extends StatefulWidget {
+  const ExampleFlutterCardSwiper({super.key});
 
   @override
-  State<ExampleCardSwiper> createState() => _ExampleCardSwiperState();
+  State<ExampleFlutterCardSwiper> createState() => _ExampleFlutterCardSwiperState();
 }
 
-class _ExampleCardSwiperState extends State<ExampleCardSwiper> {
+class _ExampleFlutterCardSwiperState extends State<ExampleFlutterCardSwiper> {
   final CardSwiperController controller = CardSwiperController();
   final cards = candidates.map(ExampleCard.new).toList();
 
@@ -24,7 +24,7 @@ class _ExampleCardSwiperState extends State<ExampleCardSwiper> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Card Swiper')),
+      appBar: AppBar(title: const Text('Flutter card swiper')),
       body: SafeArea(
         child: Column(
           children: [
